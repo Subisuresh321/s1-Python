@@ -8,7 +8,10 @@ class book(publisher):
         super().__init__(name)
         self.title=title
         self.author=author
-
+    def details(self):
+        print(f"Publisher name : {self.name}")    
+        print(f"Book Title : {self.title}")    
+        print(f"Author : {self.author}")   
 class python(book):
     def __init__(self, name, title, author, price,page_num):
         super().__init__(name, title, author)
@@ -16,9 +19,7 @@ class python(book):
         self.pages=page_num
         
     def details(self):
-        print(f"Publisher name : {self.name}")    
-        print(f"Book Title : {self.title}")    
-        print(f"Author : {self.author}")    
+        super().details()   
         print(f"Price : {self.price}")    
         print(f"Number of Pages : {self.pages}")
 
